@@ -24,7 +24,7 @@ There is also the possibility to create a prediction model through BigML in orde
 Run ingest and retrieve data in time adopted to a Redis database.<br>
 <br>
 <img src="http://www.uploads.co.il/uploads/images/427791154.JPG" width="500" height="350">
-<br>
+
 
 <h2>Useful technologies:</h2>
 Node.js, Kafka, Socket.io, HTML, CSS, MySQL, MongoDB, Redis.
