@@ -4,17 +4,20 @@ const Kafka = require("node-rdkafka");
 // use you own parameters
 const kafkaConf = {
   "group.id": "cloudkarafka-example",
-  "metadata.broker.list": "dory-01.srvs.cloudkafka.com:9094,dory-02.srvs.cloudkafka.com:9094,dory-03.srvs.cloudkafka.com:9094".split(","),
+  "metadata.broker.list": "sulky-01.srvs.cloudkafka.com:9094,sulky-02.srvs.cloudkafka.com:9094,sulky-03.srvs.cloudkafka.com:9094".split(","),
   "socket.keepalive.enable": true,
   "security.protocol": "SASL_SSL",
   "sasl.mechanisms": "SCRAM-SHA-256",
-  "sasl.username": "nznembjs",
-  "sasl.password": "9K0VrWHEEfZerFBViS8wz5Cscf89_oRU",
+  "sasl.username": "cmb829c5",
+  "sasl.password": "f_vfZL1jxHTsWhDVcraJte7FpV4T9FAE",
   "debug": "generic,broker,security"
 };
 
-const prefix = "nznembjs-";
+const prefix = "cmb829c5-";
 const topic = `${prefix}default`;
+const topic2 = `${prefix}new`;
+
+
 
 const producer = new Kafka.Producer(kafkaConf);
 
@@ -29,5 +32,7 @@ module.exports.publish = function(msg)
 {   
   console.log('hi generate massage')
   m=JSON.stringify(msg);
-  producer.produce(topic, -1, genMessage(m), uuid.v4());   
+  // console.log(m)  
+  // producer.produce(topic, -1, genMessage(m), uuid.v4()); 
+  producer.produce(topic, -1, genMessage(m), uuid.v4()); 
 }

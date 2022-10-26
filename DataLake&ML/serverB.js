@@ -2,41 +2,46 @@ const express = require('express');
 const app = express();
 var server = require('http').createServer(app)
 const kafka = require('./models/consumerKafka');
-const mongoose = require('mongoose')
-const db = require('./models/mongoDB')
-const io = require("socket.io")(server, {
-    allowEIO3: true // false by default
-});
+const mongo = require('./models/mongoDB/mongoDB');
+var sqlConn = require('./models/mySql')
+const BigML = require('./models/bigML')
 
-const port = 3026
+const port = 3025
 
 var newMessage = "Waiting for new call...";
 
-io.on("connection", (socket) => {
-    kafka.consumer.on("data", (msg) => {
-        const newMessage = JSON.parse(msg.value);
-        console.log(newMessage)
+
+kafka.consumer.on("data", (msg) => {
+    const newMessage = JSON.parse(msg.value);
+    console.log(newMessage)
+    mongo.insertData(newMessage);
+    var res = BigML.createModel(mongo);
+    BigML.predict({},mongo);
 });
-});
-
-// Connect to MongoDB
-db
-
-
-// io.on("connection", async (socket) => {
 
 
 
 
+// console.log('hi');
+    // const msg  = '[{"stores":[{"symbol":966,"name":"1ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17},{"symbol":966,"name":"2ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17},{"symbol":966,"name":"3ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17},{"symbol":966,"name":"4ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17},{"symbol":966,"name":"5ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17},{"symbol":966,"name":"6ABU RUBEIA","chocolate":28,"vanilla":15,"strawberry":14,"lemon":23,"halvah":17}]}]'
+    // newMessage = JSON.parse(msg);
+    // mongo.insertData(newMessage);
+    // var res = BigML.createModel(mongo);
+    // BigML.predict({_id:0},mongo);
+    // mongo.export2csv()
+// kafka.consumer.on("disconnected");
+
+
+// io.on("connection", (socket) => {
+//     kafka.consumer.on("data", (msg) => {
+//         const newMessage = JSON.parse(msg.value);
+//         console.log(newMessage)
+// });
 // });
 
-// kafka.consumer.on("data", async (msg) => {
-//     const newCall = JSON.parse(msg.value);
-//     console.log("get new message")
-// });
 
 
-// mongoose.connection.once('open', () => {
-//     console.log('Connected to MongoDB from server');
-    server.listen(port, () => console.log(`Server B is listening at http://localhost:${port}`));
-// })
+
+
+server.listen(port, () => console.log(`Server B is listening at http://localhost:${port}`));
+

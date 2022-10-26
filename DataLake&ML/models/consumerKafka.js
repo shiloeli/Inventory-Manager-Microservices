@@ -2,18 +2,19 @@
 const Kafka = require("node-rdkafka");
 
 const kafkaConf = {
-    "group.id": "cloudkarafka-example",
-    "metadata.broker.list": "dory-01.srvs.cloudkafka.com:9094,dory-02.srvs.cloudkafka.com:9094,dory-03.srvs.cloudkafka.com:9094".split(","),
-    "socket.keepalive.enable": true,
-    "security.protocol": "SASL_SSL",
-    "sasl.mechanisms": "SCRAM-SHA-256",
-    "sasl.username": "nznembjs",
-    "sasl.password": "9K0VrWHEEfZerFBViS8wz5Cscf89_oRU",
-    "debug": "generic,broker,security"
-  };
-  
-  const prefix = "nznembjs-";
-  const topic = `${prefix}default`;
+  "group.id": "cloudkarafka-example",
+  "metadata.broker.list": "dory-01.srvs.cloudkafka.com:9094,dory-02.srvs.cloudkafka.com:9094,dory-03.srvs.cloudkafka.com:9094".split(","),
+  "socket.keepalive.enable": true,
+  "security.protocol": "SASL_SSL",
+  "sasl.mechanisms": "SCRAM-SHA-256",
+  "sasl.username": "qw8rmirb",
+  "sasl.password": "P_yrWTln5BeT7fFiLXbddBSCDI8oayAC",
+  "debug": "generic,broker,security"
+};
+
+const prefix = "qw8rmirb-";
+const topic = `${prefix}default`;
+const topic2 = `${prefix}new`;
 
 
 const topics = [topic];
@@ -32,7 +33,7 @@ consumer.on("ready", function(arg) {
 });
 
 consumer.on("data", function(m) {
- console.log(m.value.toString());
+//  console.log(m.value.toString());
 });
 
 consumer.on("disconnected", (arg)=> {
