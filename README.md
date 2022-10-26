@@ -10,8 +10,9 @@ The purpose of the project is to create a platform that allows a chain of ice cr
 The system is made up of three screens where on the first screen we will get a general indication about the stock available in the stores.<br>
 In the second screen we will create a predictive model for selected parameters according to the history data that exists in the MongoDB system.<br>
 The third screen will show details for a selected store.<br>
-<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="860" height="400">
 <br>
+<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="860" height="400">
+
 
 <h2>System structure:</h2>
 The project is built from 3 main servers:<br>
