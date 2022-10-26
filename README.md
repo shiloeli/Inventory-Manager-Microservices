@@ -6,7 +6,7 @@ The purpose of the project is to create a platform that allows a chain of ice cr
 
 
 <h2>System structure:</h2>
-The project is built from 3 main servers<br>
+The project is built from 3 main servers:<br>
 1) Responsible for simulating the sales data of the stores and sending them to server 2.<br>
 2) Responsible for receiving data from server 1, creating a data table in mySQL,<br>
 receiving data from the various APIs and entering them into a MongoDB database,<br>
