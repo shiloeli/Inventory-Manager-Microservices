@@ -7,6 +7,8 @@ The purpose of the project is to create a platform that allows a chain of ice cr
 <br>
 <img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="430">
 <br>
+<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="900" height="430">
+<br>
 
 <h2>System structure:</h2>
 The project is built from 3 main servers:<br>
@@ -20,7 +22,5 @@ Run ingest and retrieve data in time adopted to a Redis database.<br>
 <img src="http://www.uploads.co.il/uploads/images/427791154.JPG" width="500" height="350">
 <br>
 
-<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="900" height="430">
-<br>
 <h2>Useful technologies:</h2>
 Node.js, Kafka, Socket.io, HTML, CSS, MySQL, MongoDB, Redis.
