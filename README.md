@@ -3,9 +3,9 @@
 <h2>Description:</h2>
 <br>
 The purpose of the project is to create a platform that allows a chain of ice cream shops to receive up-to-date information at any given time and to analyze the data in the chain of shops.
-
-<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="400">
-
+<br>
+<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="430">
+<br>
 
 <h2>System structure:</h2>
 The project is built from 3 main servers:<br>
@@ -15,8 +15,8 @@ receiving data from the various APIs and entering them into a MongoDB database,<
 There is also the possibility to create a prediction model through BigML in order to get a sales forecast<br>
 3) Responsible for transferring data from the server side to the client side and vice versa,<br>
 Run ingest and retrieve data in time adopted to a Redis database.<br>
-
-<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="400">
-
+<br>
+<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="430">
+<br>
 <h2>Useful technologies:</h2>
 Node.js, Kafka, Socket.io, HTML, CSS, MySQL, MongoDB, Redis.
