@@ -5,9 +5,9 @@
 The purpose of the project is to create a platform that allows a chain of ice cream shops to receive up-to-date information at any given time and to analyze the data in the chain of shops.
 <br>
 <br>
-<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="430">
+<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="870" height="400">
 <br>
-<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="900" height="430">
+<img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="870" height="400">
 <br>
 
 <h2>System structure:</h2>
