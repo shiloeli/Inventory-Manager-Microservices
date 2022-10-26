@@ -17,6 +17,9 @@ There is also the possibility to create a prediction model through BigML in orde
 3) Responsible for transferring data from the server side to the client side and vice versa,<br>
 Run ingest and retrieve data in time adopted to a Redis database.<br>
 <br>
+<img src="http://www.uploads.co.il/uploads/images/427791154.JPG" width="500" height="430">
+<br>
+
 <img src="http://www.uploads.co.il/uploads/images/790555228.JPG" width="900" height="430">
 <br>
 <h2>Useful technologies:</h2>
