@@ -16,6 +16,7 @@ There is also the possibility to create a prediction model through BigML in orde
 3) Responsible for transferring data from the server side to the client side and vice versa,<br>
 Run ingest and retrieve data in time adopted to a Redis database.<br>
 
+<img src="http://www.uploads.co.il/uploads/images/681650092.JPG" width="900" height="450">
 
 <h2>Useful technologies:</h2>
 Node.js, Kafka, Socket.io, HTML, CSS, MySQL, MongoDB, Redis.
